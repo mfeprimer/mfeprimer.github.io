@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.58.3" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Introduction" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/" />
+
+<title>Introduction | MFEprimer</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.92b28337361d2bcca5e0ffaff5092dda7140e89d9a7a7a4dcc6055fd7d702ace.css" integrity="sha256-krKDNzYdK8yl4P&#43;v9Qkt2nFA6J2aenpNzGBV/X1wKs4=">
+
+
+<script defer src="/search.min.9fd28f6300f1140b911711b3748baaeaba78bfe18b0c8ce29d743a0d19855300.js" integrity="sha256-n9KPYwDxFAuRFxGzdIuq6rp4v&#43;GLDIzinXQ6DRmFUwA="></script>
+
+<link rel="alternate" type="application/rss+xml" href="http://example.org/index.xml" title="MFEprimer" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://example.org/"><span>MFEprimer</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/mfeprimer-3.1/"><strong>MFEprimer-3.1</strong></a></li>
+<li><a href="/publications/">Publications</a></li>
+<li><a href="/online-server/">Download and Online Servers</a></li>
+</ul>
+
+<p><br></p>
+
+<ul>
+<li><strong>Old versions</strong>
+
+<ul>
+<li><a href="/old-versions/mfeprimer-2.0/">MFEprimer-2.0</a></li>
+<li><a href="/old-versions/mfeprimer-1.0/">MFEprimer-1.0</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Introduction</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="mfeprimer-3-0">MFEprimer-3.0</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Quality control for primers is crucial for a successful PCR reaction. For example, multiplex PCR is an efficient capture method to simultaneously amplify up to thousands of SNPs in one tube. And it requires compatible primer sets with no non-specific amplifications, no dimers etc. Previous versions of MFEprimer (Qu, et al., 2009, Qu, et al., 2012) mainly focused on primer specificity evaluation. In current version, MFEprimer-3.0 was developed as a full-functional primer quality control program.</p>
+
+<h2 id="what-is-new">What is New?</h2>
+
+<p>Binding sites searching is more sensitive by updating the k-mer algorithm to allow mismatches within the k-mer except the first base at the 3’ end. And the binding sites of each primer with stable 3’ end are also listed in output.
+Implements algorithms to quickly check self-dimers, cross-dimers and hairpins.
+Command-line version has an option of JSON output to make MFEprimer more useful by acting as a quality control step in “primer design → quality control → redesign” pipeline.
+Added a function to check whether the binding sites contain SNPs, which will affect the consistency of binding efficiency among different samples.
+Rewrote all the code by Go language to make the program more reliable, fast and easy to use across multiple platforms.Besides the web server with predefined databases, custom databases upon request and command-line tool for user-defined databases are also supported now.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p><a href="/online-server/">Download and Online Servers</a></p>
+
+<h2 id="how-to-cite-us">How to cite us</h2>
+
+<blockquote>
+<p>Kun Wang, Haiwei Li, Yue Xu, Qianzhi Shao, Jianming Yi, Ruichao Wang, Wanshi Cai, Xingyi Hang, Chenggang Zhang, Haoyang Cai, Wubin Qu, MFEprimer-3.0: quality control for PCR primers, Nucleic Acids Research, Volume 47, Issue W1, 02 July 2019, Pages W610–W613, <a href="https://doi.org/10.1093/nar/gkz351">https://doi.org/10.1093/nar/gkz351</a>.</p>
+</blockquote>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc levels-6 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#mfeprimer-3-0">MFEprimer-3.0</a>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#what-is-new">What is New?</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#how-to-cite-us">How to cite us</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+</body>
+
+</html>

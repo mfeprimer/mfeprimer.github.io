@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="MFEprimer-3.1" />
+<meta property="og:description" content="MFEprimer-3.1 Big change from v3.0
+Major changes from v3.0  merge several tools into one single execute file mfeprimer support major platforms: Linux, Mac and Windows bug fixed and faster than v3.0 fix thermodynamics calculation bugs for dimers and hairpins local web server version is available  Summary of different versions Before getting started, I&rsquo;d like to make a summary for different versions. Please choose the right version for you." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/mfeprimer-3.1/" />
+
+<title>MFEprimer-3.1 | MFEprimer</title>
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/book.min.92b28337361d2bcca5e0ffaff5092dda7140e89d9a7a7a4dcc6055fd7d702ace.css" integrity="sha256-krKDNzYdK8yl4P&#43;v9Qkt2nFA6J2aenpNzGBV/X1wKs4=">
+
+
+<script defer src="/search.min.9fd28f6300f1140b911711b3748baaeaba78bfe18b0c8ce29d743a0d19855300.js" integrity="sha256-n9KPYwDxFAuRFxGzdIuq6rp4v&#43;GLDIzinXQ6DRmFUwA="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://example.org/"><span>MFEprimer</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" placeholder="Search" id="book-search-input" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+    <ul>
+<li><a href="/mfeprimer-3.1/"class=active><strong>MFEprimer-3.1</strong></a></li>
+<li><a href="/publications/">Publications</a></li>
+<li><a href="/online-server/">Download and Online Servers</a></li>
+</ul>
+
+<p><br></p>
+
+<ul>
+<li><strong>Old versions</strong>
+
+<ul>
+<li><a href="/old-versions/mfeprimer-2.0/">MFEprimer-2.0</a></li>
+<li><a href="/old-versions/mfeprimer-1.0/">MFEprimer-1.0</a></li>
+</ul></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>MFEprimer-3.1</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="mfeprimer-3-1">MFEprimer-3.1</h1>
+
+<p>Big change from v3.0</p>
+
+<h2 id="major-changes-from-v3-0">Major changes from v3.0</h2>
+
+<ul>
+<li>merge several tools into one <strong>single execute file</strong> <code>mfeprimer</code></li>
+<li>support major platforms: Linux, Mac and Windows</li>
+<li>bug fixed and <strong>faster</strong> than v3.0</li>
+<li>fix <strong>thermodynamics</strong> calculation bugs for dimers and hairpins</li>
+<li><strong>local web server</strong> version is available</li>
+</ul>
+
+<h2 id="summary-of-different-versions">Summary of different versions</h2>
+
+<p>Before getting started, I&rsquo;d like to make a summary for different versions. Please choose the right version for you.</p>
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>web server by the author</th>
+<th>command-line</th>
+<th>local web server</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>primer number</td>
+<td>&lt;= 50</td>
+<td>no limit</td>
+<td>usually &lt;= 50</td>
+</tr>
+
+<tr>
+<td>database</td>
+<td>pre-indexed by the author</td>
+<td>no limit</td>
+<td>no limit</td>
+</tr>
+
+<tr>
+<td>user interface</td>
+<td>graphic and easy to use</td>
+<td>terminal and requires essential Linux skills</td>
+<td>graphic and easy to use</td>
+</tr>
+
+<tr>
+<td>users from</td>
+<td>worldwide</td>
+<td>the owner</td>
+<td>usually all members of the institution</td>
+</tr>
+
+<tr>
+<td>workflow</td>
+<td>no</td>
+<td>yes and can be integrated into user defined primer design workflows</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="1-web-servers-maintained-by-the-author">1. Web servers maintained by the author‌</h2>
+
+<ol>
+<li><a href="https://mfeprimer3.igenetech.com/">https://mfeprimer3.igenetech.com/</a> [version 3.0] web server funded by <a href="http://www.igenetech.com/">iGeneTech</a>, a company aims to provide kit and service for target capture and sequencing, also is the company the author works for.</li>
+<li><a href="http://124.207.243.56:8081/">http://124.207.243.56:8081/</a> [version 3.1, for test] web server funded by Prof. Dongsheng Zhao (AMMS, 军事医学科学院). Currently, there is only human genome (hg19) available and will add other genomes later.</li>
+</ol>
+
+<h2 id="2-command-line-version">2. Command-line version</h2>
+
+<h3 id="install">Install</h3>
+
+<ol>
+<li>Please download the right version for your machine: <a href="https://github.com/quwubin/MFEprimer-3.0/releases/tag/v3.1.0">https://github.com/quwubin/MFEprimer-3.0/releases/tag/v3.1.0</a> (take Linux version as an example).</li>
+<li>Uncompress the file.</li>
+<li>Make sure the file has the execute permission.</li>
+
+<li><p>Run with option &ldquo;-h&rdquo; to get help message. You can rename the file to <code>mfeprimer</code> as you wish.</p>
+
+<pre><code class="language-bash"># download the executable mfeprimer file
+wget -c https://github.com/quwubin/MFEprimer-3.0/releases/download/v3.1.0/mfeprimer-3.1.0-linux-amd64.gz
+
+
+# uncompress the file
+gzip -d mfeprimer-3.1.0-linux-amd64.gz
+
+
+# make it executable
+chmod +x mfeprimer-3.1.0-linux-amd64
+
+
+# test it
+./mfeprimer-3.1.0-linux-amd64 -h
+
+
+MFEprimer-3.1.0, a functional primer quality control program for checking
+non-specific amplicons, dimers, hairpins and others.
+
+
+Web site: https://www.mfeprimer.com/
+
+
+Cite: Wang, K., Li, H., Xu, Y., Shao, Q., Yi, J., Wang, R., … Qu, W. (2019).
+MFEprimer-3.0: quality control for PCR primers. Nucleic Acids Research.
+https://doi.org/10.1093/nar/gkz351.
+
+
+Usage:
+mfeprimer [flags]
+mfeprimer [command]
+
+
+Available Commands:
+dimer       analysis primer dimers
+hairpin     analysis primer hairpins
+help        Help about any command
+index       index fasta file for mfeprimer
+indexcmp    Compare the old and the new index file, return false when they are not same
+spec        analysis specificity of primers
+version     print version number
+
+
+Flags:
+-b, --bind           print specific and nonspecific binding sites and patterns for each primer
+-d, --db strings     [*] database indexed for specificity check: -d hg19.fa -d mrna.fa
+  --diva float     concentration of divalent cations [mM] (default 1.5)
+  --dntp float     concentration of dNTPs [mM] (default 0.25)
+-h, --help           help for mfeprimer
+-i, --in string      [*] a file contains primer sequences in fasta format
+-j, --json           output in json format
+-k, --kvalue int     k value for format, defaut is 9 (default 9)
+-S, --maxSize int    max product size for the predicted amplicons [bp] (default 2000)
+-s, --minSize int    min product size for the predicted amplicons [bp]
+  --misEnd int     mis-match ends to the position of 3' end, 9 (kvalue) for the 9th base from the 3'end (default 9)
+  --misMatch int   max allowed mismatches between kmer and its binding sites
+  --misStart int   mis-match starts from the position of 3' end, 1 is for the very end of primer. (default 1)
+  --mono float     concentration of monovalent cations [mM] (default 50)
+  --oligo float    concentration of annealing oligos [nM] (default 50)
+-o, --out string     output file name, e.g., primer.mfe.txt
+  --snp string     SNP file name in bed format, e.g., dbsnp151.bed
+-t, --tm float       tm cutoff value to filter the amplicons (default 30)
+
+
+Use &quot;mfeprimer [command] --help&quot; for more information about a command.
+</code></pre></li>
+</ol>
+
+<blockquote>
+<p>In v3.1.0, I make <code>index</code>,<code>dimer</code>,<code>hairpin</code> as sub-commands to <code>mfeprimer</code>, each sub-command has their own arguments and options to set.</p>
+
+<p>I manually tested the Mac and Linux version, and I will find time to test the Windows version.</p>
+</blockquote>
+
+<h3 id="usage">Usage</h3>
+
+<p>‌</p>
+
+<p>I&rsquo;d like to do some examples with sample files, let&rsquo;s prepare the test files:</p>
+
+<pre><code class="language-bash"># make a test directory
+mkdir test
+cd test
+
+
+# chrM.fa as database
+wget -c https://github.com/quwubin/MFEprimer-3.0/raw/master/chrM.fa
+
+
+# p.fa test primer sequences in fasta format
+wget -c https://github.com/quwubin/MFEprimer-3.0/raw/master/p.fa
+
+
+# snp in bed format to check whether a primers bind to a snp site
+wget -c https://github.com/quwubin/MFEprimer-3.0/raw/master/snp.bed
+
+
+# make a softlink
+ln -s ../mfeprimer-3.1.0-linux-amd64 mfeprimer 
+</code></pre>
+
+<p>The file tree is:</p>
+
+<pre><code class="language-bash">tree .
+.
+├── chrM.fa
+├── mfeprimer -&gt; ../mfeprimer-3.1.0-linux-amd64
+├── p.fa
+└── snp.bed
+</code></pre>
+
+<h3 id="index-databases">Index databases</h3>
+
+<pre><code class="language-bash">./mfeprimer index -i chrM.fa
+</code></pre>
+
+<p>After index, the file tree is:</p>
+
+<pre><code class="language-bash">tree .
+.
+├── chrM.fa
+├── chrM.fa.fai
+├── chrM.fa.json
+├── chrM.fa.log
+├── chrM.fa.primerqc
+├── chrM.fa.primerqc.fai
+├── mfeprimer -&gt; ../mfeprimer-3.1.0-linux-amd64
+├── p.fa
+└── snp.bed
+</code></pre>
+
+<blockquote>
+<p><code>mfeprimer index</code> will add 5 files with suffixes: &ldquo;.fai&rdquo;, &ldquo;.json&rdquo;, &ldquo;.primerqc&rdquo;, &ldquo;.primerqc.fai&rdquo; and &ldquo;.log&rdquo;.</p>
+</blockquote>
+
+<h3 id="run-mfeprimer-for-full-quality-control">Run <code>mfeprimer</code> for full quality control</h3>
+
+<pre><code class="language-bash"># run mfeprimer
+./mfeprimer -i p.fa -d chrM.fa
+</code></pre>
+
+<p>Without &ldquo;-o&rdquo; options, the result will print to the screen:</p>
+
+<pre><code class="language-bash">MFEprimer-3.0 Primer Quality Reports (2019-10-17 11:29:18)
+
+
+Primer ID                      Sequence (5'--&gt;3')                    Length     GC      Tm      Dg        Binding Number
+                                                                      (bp)      (%)    (°C)  (kcal/mol)   Plus     Minus
+
+
+p1                             CTACAACCCCACCACGTACC                      20   60.00   60.55    -22.23         0         0
+p2                             CGTTACACACTTTGCGGCAA                      20   50.00   60.47    -22.43         0         0
+p3                             CTTAAATAGGGACCTGTATGAATGGCTC              28   42.86   61.98    -27.11         2         1
+p4                             CCGAAATTTTTAATGCAGGTTTGGTAGT              28   35.71   61.97    -27.14         0         1
+p5                             GGACACTCTATGGGAAAGAGTGTCC                 25   52.00   62.91    -26.07         0         1
+
+
+
+Hairpin List (1)
+
+Hairpin 1: p5
+
+
+    Score: 9, Tm = 26.56 °C, Delta G = -4.48 kcal/mol
+
+
+    /////////-------\\\\\\\\\
+    GGACACTCTATGGGAAAGAGTGTCC
+
+
+Dimer List (1)
+
+Dimer 1: p2 x p2
+
+
+    Score: 7, Tm = 14.55 °C, Delta G = -6.09 kcal/mol
+
+
+CGTTACACACTTTGCGGCAA
+           ::::.::::
+           AACGGCGTTTCACACATTGC
+
+
+
+Descriptions of [ 1 ] potential amplicons
+
+
+AmpID HitID                                            Size       FpTm       RpTm       FpDg       RpDg
+                                                       (bp)       (°C)       (°C)   kcal/mol   kcal/mol
+
+
+1     chrM                                              200      61.93      62.67     -27.40     -28.08
+
+
+
+Amplicon details
+
+
+Amp 1: p3 + p4 ==&gt; chrM
+
+    Size = 200 bp, GC content = 43.50%
+    F: Tm = 61.93 °C, Delta G = -27.40 kcal/mol
+    R: Tm = 62.67 °C, Delta G = -28.08 kcal/mol
+    Binding sites: 2612(28/28) ... 2811(28/28)
+
+&gt;&gt;&gt;p3
+   1                          28
+5' CTTAAATAGGGACCTGTATGAATGGCTC 3'
+   ::::::::::::::::::::::::::::                                                            2811
+5' CTTAAATAGGGACCTGTATGAATGGCTCcacgagggttcagct...acccacaggtcctaaACTACCAAACCTGCATTAAAAATTTCGG 3'
+   2612                                                         ::::::::::::::::::::::::::::
+                                                             3' ACTACCAAACCTGCATTAAAAATTTCGG 5'
+                                                               28                          1
+                                                                                          p4&lt;&lt;&lt;
+
+&gt;Amp_1 p3 + p4 ==&gt; chrM
+CTTAAATAGGGACCTGTATGAATGGCTCcacgagggttcagctgtctcttacttttaaccagtgaaattgacctgcccgt
+gaagaggcgggcataacacagcaagacgagaagaccctatggagctttaatttattaatgcaaacagtacctaacaaacc
+cacaggtcctaaACTACCAAACCTGCATTAAAAATTTCGG
+
+
+
+
+Parameters
+
+
+                   Primer file: p.fa
+                      Database: chrM.fa
+                        Kvalue: 9
+                      MisMatch: 0
+                Tm cutoff (°C): 30.00
+        Amplicon min size (bp): 0
+        Amplicon max size (bp): 2000
+                           SNP:
+       Monovalent cations [mM]: 50.00
+         Divalent cations [mM]: 1.50
+                    dNTPs [mM]: 0.25
+         Annealing oligos [nM]: 50.00
+
+
+
+Cite
+
+Kun Wang, Haiwei Li, Yue Xu, Qianzhi Shao, Jianming Yi, Ruichao Wang, Wanshi Cai, Xingyi Hang,
+Chenggang Zhang, Haoyang Cai, Wubin Qu, MFEprimer-3.0: quality control for PCR primers,
+Nucleic Acids Research, Volume 47, Issue W1, 02 July 2019, Pages W610–W613,
+https://doi.org/10.1093/nar/gkz351
+
+
+Web &amp; Contact
+
+https://www.mfeprimer.com
+Wubin Qu &lt;quwubin@gmail.com&gt;
+
+
+Total time used: 81.641035ms.
+</code></pre>
+
+<p>The relation between <code>mfeprimer</code> and its sub-commands: <code>mfeprimer</code> do a full quality control for primers for specificity, binding sites, dimers and hairpins. While, <code>spec</code> only for specificity, <code>dimer</code> is only for dimers and <code>hairpin</code> is only for hairpins, as their names indicated. The sub-commands have more options to control the behavious. <code>mfeprimer</code> only have default parameters for dimers and hairpins.</p>
+
+<p>‌</p>
+
+<h3 id="run-mfeprimer-spec-for-specificity">Run <code>mfeprimer spec</code> for specificity</h3>
+
+<pre><code class="language-bash">./mfeprimer spec -i p.fa -d chrM.fa
+</code></pre>
+
+<p>‌</p>
+
+<h3 id="run-mfeprimer-dimer-for-dimers">Run <code>mfeprimer dimer</code> for dimers</h3>
+
+<pre><code class="language-bash">./mfeprimer dimer -i p.fa
+</code></pre>
+
+<h3 id="run-mfeprimer-hairpin-for-hairpins">Run <code>mfeprimer hairpin</code> for hairpins</h3>
+
+<pre><code class="language-bash">./mfeprimer hairpin -i p.fa
+</code></pre>
+
+<h2 id="3-local-web-server">3. Local web server</h2>
+
+<p>to be added.</p>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc levels-6 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#mfeprimer-3-1">MFEprimer-3.1</a>
+<ul>
+<li><a href="#major-changes-from-v3-0">Major changes from v3.0</a></li>
+<li><a href="#summary-of-different-versions">Summary of different versions</a></li>
+<li><a href="#1-web-servers-maintained-by-the-author">1. Web servers maintained by the author‌</a></li>
+<li><a href="#2-command-line-version">2. Command-line version</a>
+<ul>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#index-databases">Index databases</a></li>
+<li><a href="#run-mfeprimer-for-full-quality-control">Run <code>mfeprimer</code> for full quality control</a></li>
+<li><a href="#run-mfeprimer-spec-for-specificity">Run <code>mfeprimer spec</code> for specificity</a></li>
+<li><a href="#run-mfeprimer-dimer-for-dimers">Run <code>mfeprimer dimer</code> for dimers</a></li>
+<li><a href="#run-mfeprimer-hairpin-for-hairpins">Run <code>mfeprimer hairpin</code> for hairpins</a></li>
+</ul></li>
+<li><a href="#3-local-web-server">3. Local web server</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+</body>
+
+</html>
