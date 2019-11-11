@@ -16,7 +16,7 @@ Major changes from v3.0  merge several tools into one single execute file mfepri
 <link rel="stylesheet" href="/book.min.92b28337361d2bcca5e0ffaff5092dda7140e89d9a7a7a4dcc6055fd7d702ace.css" integrity="sha256-krKDNzYdK8yl4P&#43;v9Qkt2nFA6J2aenpNzGBV/X1wKs4=">
 
 
-<script defer src="/search.min.2199ee741e4282bdd81e6b52169856d1a7f25c1d0c9f8456aaf14772531a4803.js" integrity="sha256-IZnudB5Cgr3YHmtSFphW0afyXB0Mn4RWqvFHclMaSAM="></script>
+<script defer src="/search.min.9f029a69e0d9cf7aa3c92375454d5cf16ddb86d6a934dd3fb02808cceee7b2a1.js" integrity="sha256-nwKaaeDZz3qjySN1RU1c8W3bhtapNN0/sCgIzO7nsqE="></script>
 
 <!--
 Made with Book Theme
@@ -173,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="install">Install</h3>
 
 <ol>
-<li>Please download the right version for your machine: <a href="https://github.com/quwubin/MFEprimer-3.0/releases/tag/v3.1.0">https://github.com/quwubin/MFEprimer-3.0/releases/tag/v3.1.0</a> (take Linux version as an example).</li>
+<li>Please download the right version for your machine: <a href="https://github.com/quwubin/MFEprimer-3.0/releases">https://github.com/quwubin/MFEprimer-3.0/releases</a> (take Linux version as an example).</li>
 <li>Uncompress the file.</li>
 <li>Make sure the file has the execute permission.</li>
 
@@ -336,14 +336,11 @@ p4                             CCGAAATTTTTAATGCAGGTTTGGTAGT              28   35
 p5                             GGACACTCTATGGGAAAGAGTGTCC                 25   52.00   62.91    -26.07         0         1
 
 
-
 Hairpin List (1)
 
 Hairpin 1: p5
 
-
     Score: 9, Tm = 26.56 °C, Delta G = -4.48 kcal/mol
-
 
     /////////-------\\\\\\\\\
     GGACACTCTATGGGAAAGAGTGTCC
@@ -460,7 +457,67 @@ Total time used: 81.641035ms.
 
 <h2 id="3-local-web-server">3. Local web server</h2>
 
-<p>to be added.</p>
+<h3 id="download-and-install">Download and install</h3>
+
+<ol>
+<li>Please download the right version for your machine: <a href="https://github.com/quwubin/MFEprimer-3.0/releases">https://github.com/quwubin/MFEprimer-3.0/releases</a> (take the Mac version as an example).</li>
+<li>Uncompress the file.</li>
+<li>Make sure the file has the execute permission.</li>
+
+<li><p>Run with option &ldquo;-h&rdquo; to get help message. You can rename the file to <code>mfeprimer</code> as you wish.</p>
+
+<pre><code class="language-bash"># download the executable mfeprimer-web file
+wget -c https://github.com/quwubin/MFEprimer-3.0/releases/download/v3.1.1/mfeprimer-web-3.1.1-darwin-amd64.tar.gz
+
+# uncompress the file
+tar zxvf mfeprimer-web-3.1.1-darwin-amd64.tar.gz
+
+# The file tree is:
+tree -L 2
+
+.
+├── conf
+│   └── app.conf
+├── mfedb
+│   ├── chrM.fa
+│   ├── chrM.fa.fai
+│   ├── chrM.fa.json
+│   ├── chrM.fa.log
+│   ├── chrM.fa.primerqc
+│   └── chrM.fa.primerqc.fai
+├── mfeprimer-web
+├── static
+│   ├── css
+│   ├── fonts
+│   ├── img
+│   └── js
+└── views
+├── dimer
+├── hairpin
+├── layout.html
+├── seq
+└── spec
+
+
+# test it
+./mfeprimer-web
+
+# open your browser and enter the following address, and you will see the default page.
+
+http://localhost:8080/
+</code></pre></li>
+</ol>
+
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8txd89sf6j31au0u04is.jpg" alt="mfepriemr-web front page" /></p>
+
+<h3 id="configure-the-server">Configure the server</h3>
+
+<p>Open the &ldquo;conf/app.conf&rdquo;, change the corresponding item following the references in the file.</p>
+
+<h3 id="add-database">Add database</h3>
+
+<p>There is an example database named &ldquo;chrM.fa&rdquo; in &ldquo;mfedb&rdquo; directory. You can place any database here
+and index the database with command <code>mfeprimer index -i dbname.fasta</code>.</p>
 </article>
 
       
@@ -489,7 +546,12 @@ Total time used: 81.641035ms.
 <li><a href="#run-mfeprimer-dimer-for-dimers">Run <code>mfeprimer dimer</code> for dimers</a></li>
 <li><a href="#run-mfeprimer-hairpin-for-hairpins">Run <code>mfeprimer hairpin</code> for hairpins</a></li>
 </ul></li>
-<li><a href="#3-local-web-server">3. Local web server</a></li>
+<li><a href="#3-local-web-server">3. Local web server</a>
+<ul>
+<li><a href="#download-and-install">Download and install</a></li>
+<li><a href="#configure-the-server">Configure the server</a></li>
+<li><a href="#add-database">Add database</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
