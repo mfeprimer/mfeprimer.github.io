@@ -26,7 +26,7 @@ Major changes from v3.0  merge several tools into one single execute file mfepri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.mfeprimer.com/publications/</guid>
-      <description>Publications  MFEprimer-3.0: Quality Control for PCR Primers. Nucleic Acids Research (2019). https://dx.doi.org/10.1093/nar/gkz351. [NAR, 2019] sRNAPrimerDB: Comprehensive primer design and search web service for small non-coding RNAs[J]. [Bioinformatics, 2018] CRISPR-offinder: a CRISPR guide RNA design and off-target searching tool for user-defined protospacer adjacent motif[J]. [International journal of biological sciences, 2017] Wubin Qu# and Chenggang Zhang. Selecting Specific PCR Primers with MFEprimer. In PCR Primer Design, edited by Chhandak Basu, 1275, 201-213: Springer New York, 2015.</description>
+      <description>Publications  Wang, K. et al. MFEprimer-3.0: quality control for PCR primers. Nucleic acids research 47, W610–W613 (2019). Xie, S. et al. sRNAPrimerDB: comprehensive primer design and search web service for small non-coding RNAs. Bioinformatics 35, 1566–1572 (2019). Zhao, C. et al. CRISPR-offinder: a CRISPR guide RNA design and off-target searching tool for user-defined protospacer adjacent motif. International journal of biological sciences 13, 1470 (2017). Qu, W. &amp;amp; Zhang, C.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Major changes from v3.0  merge several tools into one single execute file mfepri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.mfeprimer.com/online-server/</guid>
-      <description> Download and Online Servers Online server  https://mfeprimer3.igenetech.com/ [version 3.0] web server funded by iGeneTech, a company aims to provide kit and service for target capture and sequencing, also is the company the author works for. http://124.207.243.56:8081/ [version 3.1, for test] web server funded by Prof. Dongsheng Zhao (AMMS, 军事医学科学院). Currently, there is only human genome (hg19) available and will add other genomes later.  Download  Download: https://github.com/quwubin/MFEprimer-3.0/releases/ Doc for install and usage  </description>
+      <description> Download and Online Servers Online servers  [v3.1] https://mfeprimer3-1.igenetech.com/ web server funded by iGeneTech. [v3.1] http://124.207.243.56:8081/ web server funded by Prof. Dongsheng Zhao (AMMS, 军事医学科学院). [v3.0] https://mfeprimer3.igenetech.com/ web server funded by iGeneTech.  Download  Download: https://github.com/quwubin/MFEprimer-3.0/releases/ Doc for install and usage  </description>
     </item>
     
     <item>
